@@ -647,16 +647,14 @@ class DetectionSystem:
 
 class NoEntryDetector:
     def __init__(self):
-        self.detector = DetectionSystem.create_detector('vj_circle_red')  # Use most sophisticated method
-        self.output_dir = Path("output")
-        self.output_dir.mkdir(exist_ok=True)
+        self.detector = DetectionSystem.create_detector('vj_circle_red')
     
     def detect(self, image_path: str) -> None:
         image = cv2.imread(image_path)
         if image is None:
             raise ValueError(f"Could not read image: {image_path}")
         
-        detections = self.detector.detect(image, return_debug=False)[0]  # Get first element of tuple
+        detections = self.detector.detect(image, return_debug=False)[0]
         
         result_image = image.copy()
         for box in detections:
