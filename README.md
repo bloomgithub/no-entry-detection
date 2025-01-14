@@ -1,6 +1,6 @@
 # No-Entry Sign Detection System
 
-Computer vision system for detecting no-entry signs using Viola-Jones object detection, circle detection, and red colour analysis.
+A phython computer vision system for detecting no-entry signs using Viola-Jones object detection, circle detection, and red colour analysis.
 
 ## Prerequisites
 
